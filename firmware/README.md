@@ -1,6 +1,6 @@
-# TinyFlies Firmware
+# Firmware
 
-This project contains the source code for the TinyFlies. 
+This project contains the source code for the SmartThermometer. 
 
 ## Environment
 
