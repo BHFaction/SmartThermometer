@@ -65,7 +65,7 @@ PROJ_OBJ += main.o
 PROJ_OBJ_TF1 += platform_tf1.o
 
 # Drivers
-PROJ_OBJ += exti.o nvic.o spi.o max6675.o
+PROJ_OBJ += exti.o nvic.o spi.o max6675.o rcc.o
 
 # Hal
 PROJ_OBJ += uart.o temp.o
@@ -74,7 +74,7 @@ PROJ_OBJ += uart.o temp.o
 PROJ_OBJ += system.o
 
 # Utilities
-# PROJ_OBJ += debug.o
+PROJ_OBJ += eprintf.o
 
 OBJ =  $(PORT_OBJ) $(ST_OBJ) $(PROJ_OBJ)
 ifeq ($(PLATFORM), TF1)

@@ -1,28 +1,3 @@
-/**
- *    ||          ____  _ __                           
- * +------+      / __ )(_) /_______________ _____  ___ 
- * | 0xBC |     / __  / / __/ ___/ ___/ __ `/_  / / _ \
- * +------+    / /_/ / / /_/ /__/ /  / /_/ / / /_/  __/
- *  ||  ||    /_____/_/\__/\___/_/   \__,_/ /___/\___/
- *
- * Crazyflie control firmware
- *
- * Copyright (c) 2012 Bitcraze AB
- *
- * eprintf.c: Memory-friendly ultra-limited embedded implementation of printf
- *
- * This implementation trades CPU cycle for data memory eficiency
- * (No malloc, no unecessary buffers, etc...)
- *
- * Functionality: Implements %s, %d, %x, %X and %f without print size settings.
- * The float handling is verry limited and without exponential notation (ie.
- * works good for number around 0 and within int32 value range).
- *
- * To use this printf a 'putc' function shall be implemented with the prototype
- * 'int putc(int)'. Then a macro calling eprintf can be created. For example:
- * int consolePutc(int c);
- * #define consolePrintf(FMT, ...) eprintf(consolePutc, FMT, ## __VA_ARGS__)
- */
 #include "eprintf.h"
 
 #include <stdarg.h>

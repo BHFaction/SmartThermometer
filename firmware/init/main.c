@@ -1,14 +1,27 @@
 #include "config.h"
 #include "system.h"
 
-/* ST includes */
 #include "stm32f10x.h"
+
+#include "uart.h"
+
+#include "max6675.h"
+#include "rcc.h"
 
 int main()
 {
+	systemInit();
 
-  while(1);
+	max6675Init();
 
-  return 0;
+	while(1)
+	{
+		uartPrintf("thermocouple, temperature => [%d, %d]\n", max6675IsThermocoupleConnected(), max6675ReadTemperature());
+		delay_ms(100);
+	}
+
+	while(1);
+
+	return 0;
 }
 

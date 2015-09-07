@@ -1,17 +1,3 @@
-/**
- *    ||          ____  _ __                           
- * +------+      / __ )(_) /_______________ _____  ___ 
- * | 0xBC |     / __  / / __/ ___/ ___/ __ `/_  / / _ \
- * +------+    / /_/ / / /_/ /__/ /  / /_/ / / /_/  __/
- *  ||  ||    /_____/_/\__/\___/_/   \__,_/ /___/\___/
- *
- * Crazyflie control firmware
- *
- * Copyright (c) 2012 Bitcraze AB
- *
- * eprintf.c: Memory-friendly ultra-limited embedded implementation of printf
- */
-
 #include <stdarg.h>
 
 #ifndef	__EPRINTF_H__
