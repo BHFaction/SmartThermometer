@@ -67,7 +67,7 @@ void spiInit(void)
 	RCC_APB2PeriphClockCmd(SPI_GPIO_RCC | RCC_APB2Periph_AFIO, ENABLE);
 
 	GPIO_InitStructure.GPIO_Pin = SPI_GPIO_CE;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_Init(SPI_GPIO_PORT, &GPIO_InitStructure);
 

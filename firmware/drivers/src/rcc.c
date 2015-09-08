@@ -35,14 +35,8 @@ void rccInit(void)
     /* Flash 2 wait state */
     FLASH_SetLatency(FLASH_Latency_2);
 
-    /* HCLK = SYSCLK */
-    if(HSE_VALUE == ((uint32_t)8000000))
-    {
-        RCC_HCLKConfig(RCC_SYSCLK_Div1);
-    } else {
-        RCC_HCLKConfig(RCC_SYSCLK_Div2);
-    }
-    
+    RCC_HCLKConfig(RCC_SYSCLK_Div1);
+
     /* PCLK2 = HCLK */
     RCC_PCLK2Config(RCC_HCLK_Div1);
 

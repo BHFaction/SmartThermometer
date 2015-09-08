@@ -1,7 +1,11 @@
 Archive member included because of file (symbol)
 
+/Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                              bin/max6675.o (__aeabi_i2d)
+/Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+                              bin/max6675.o (__aeabi_dmul)
 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
-                              bin/eprintf.o (__aeabi_d2f)
+                              bin/max6675.o (__aeabi_d2f)
 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
                               bin/eprintf.o (__aeabi_fsub)
 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
@@ -94,8 +98,6 @@ Discarded input sections
  .text.NVIC_SetVectorTable
                 0x0000000000000000       0x14 bin/misc.o
  .text.NVIC_SystemLPConfig
-                0x0000000000000000       0x18 bin/misc.o
- .text.SysTick_CLKSourceConfig
                 0x0000000000000000       0x18 bin/misc.o
  .group         0x0000000000000000        0x8 bin/stm32f10x_adc.o
  .group         0x0000000000000000        0x8 bin/stm32f10x_adc.o
@@ -1553,7 +1555,7 @@ Discarded input sections
  .data          0x0000000000000000        0x0 bin/max6675.o
  .bss           0x0000000000000000        0x0 bin/max6675.o
  .text.max6675GetID
-                0x0000000000000000       0x28 bin/max6675.o
+                0x0000000000000000       0x10 bin/max6675.o
  .debug_macro   0x0000000000000000      0x874 bin/max6675.o
  .debug_macro   0x0000000000000000       0x50 bin/max6675.o
  .debug_macro   0x0000000000000000       0x22 bin/max6675.o
@@ -1602,11 +1604,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 bin/rcc.o
  .data          0x0000000000000000        0x0 bin/rcc.o
  .bss           0x0000000000000000        0x0 bin/rcc.o
- .text.delayInit
-                0x0000000000000000       0x2c bin/rcc.o
  .text.delay_us
                 0x0000000000000000       0x38 bin/rcc.o
- .bss.fac_us    0x0000000000000000        0x1 bin/rcc.o
  .debug_macro   0x0000000000000000      0x874 bin/rcc.o
  .debug_macro   0x0000000000000000       0x50 bin/rcc.o
  .debug_macro   0x0000000000000000       0x22 bin/rcc.o
@@ -1991,6 +1990,10 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x28 bin/platform_tf1.o
  .ARM.attributes
                 0x0000000000000000       0x33 bin/platform_tf1.o
+ .data          0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
  .data          0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
  .bss           0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
  .data          0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
@@ -2292,277 +2295,308 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  *(.flashtext)
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x000000000800010c     0x18fc
-                0x000000000800010c                . = ALIGN (0x4)
+.text           0x0000000008000110     0x2108
+                0x0000000008000110                . = ALIGN (0x4)
  *(.text)
- .text          0x000000000800010c       0xa0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
-                0x000000000800010c                __aeabi_d2f
-                0x000000000800010c                __truncdfsf2
- .text          0x00000000080001ac      0x21c /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
-                0x00000000080001ac                __aeabi_frsub
-                0x00000000080001b4                __aeabi_fsub
-                0x00000000080001b4                __subsf3
-                0x00000000080001b8                __aeabi_fadd
-                0x00000000080001b8                __addsf3
-                0x0000000008000318                __aeabi_ui2f
-                0x0000000008000318                __floatunsisf
-                0x0000000008000320                __floatsisf
-                0x0000000008000320                __aeabi_i2f
-                0x000000000800033c                __aeabi_ul2f
-                0x000000000800033c                __floatundisf
-                0x000000000800034c                __aeabi_l2f
-                0x000000000800034c                __floatdisf
- .text          0x00000000080003c8      0x2a0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
-                0x00000000080003c8                __mulsf3
-                0x00000000080003c8                __aeabi_fmul
-                0x0000000008000530                __divsf3
-                0x0000000008000530                __aeabi_fdiv
- .text          0x0000000008000668       0xec /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
-                0x0000000008000668                __gesf2
-                0x0000000008000668                __gtsf2
-                0x0000000008000670                __ltsf2
-                0x0000000008000670                __lesf2
-                0x0000000008000678                __nesf2
-                0x0000000008000678                __eqsf2
-                0x0000000008000678                __cmpsf2
-                0x00000000080006d8                __aeabi_cfrcmple
-                0x00000000080006e0                __aeabi_cfcmpeq
-                0x00000000080006e0                __aeabi_cfcmple
-                0x00000000080006f0                __aeabi_fcmpeq
-                0x0000000008000704                __aeabi_fcmplt
-                0x0000000008000718                __aeabi_fcmple
-                0x000000000800072c                __aeabi_fcmpge
-                0x0000000008000740                __aeabi_fcmpgt
- .text          0x0000000008000754       0x4c /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
-                0x0000000008000754                __fixsfsi
-                0x0000000008000754                __aeabi_f2iz
- .text          0x00000000080007a0       0x38 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
-                0x00000000080007a0                __aeabi_ldivmod
- .text          0x00000000080007d8       0x60 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
-                0x00000000080007d8                __gnu_ldivmod_helper
-                0x0000000008000808                __gnu_uldivmod_helper
- .text          0x0000000008000838        0x4 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
-                0x0000000008000838                __aeabi_ldiv0
-                0x0000000008000838                __aeabi_idiv0
- .text          0x000000000800083c      0x2ac /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
-                0x000000000800083c                __divdi3
- .text          0x0000000008000ae8      0x270 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
-                0x0000000008000ae8                __udivdi3
+ .text          0x0000000008000110      0x370 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                0x0000000008000110                __aeabi_drsub
+                0x0000000008000118                __subdf3
+                0x0000000008000118                __aeabi_dsub
+                0x000000000800011c                __aeabi_dadd
+                0x000000000800011c                __adddf3
+                0x0000000008000394                __aeabi_ui2d
+                0x0000000008000394                __floatunsidf
+                0x00000000080003b4                __floatsidf
+                0x00000000080003b4                __aeabi_i2d
+                0x00000000080003d8                __extendsfdf2
+                0x00000000080003d8                __aeabi_f2d
+                0x0000000008000414                __aeabi_ul2d
+                0x0000000008000414                __floatundidf
+                0x0000000008000424                __aeabi_l2d
+                0x0000000008000424                __floatdidf
+ .text          0x0000000008000480      0x424 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+                0x0000000008000480                __aeabi_dmul
+                0x0000000008000480                __muldf3
+                0x00000000080006d4                __aeabi_ddiv
+                0x00000000080006d4                __divdf3
+ .text          0x00000000080008a4       0xa0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
+                0x00000000080008a4                __aeabi_d2f
+                0x00000000080008a4                __truncdfsf2
+ .text          0x0000000008000944      0x21c /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                0x0000000008000944                __aeabi_frsub
+                0x000000000800094c                __aeabi_fsub
+                0x000000000800094c                __subsf3
+                0x0000000008000950                __aeabi_fadd
+                0x0000000008000950                __addsf3
+                0x0000000008000ab0                __aeabi_ui2f
+                0x0000000008000ab0                __floatunsisf
+                0x0000000008000ab8                __floatsisf
+                0x0000000008000ab8                __aeabi_i2f
+                0x0000000008000ad4                __aeabi_ul2f
+                0x0000000008000ad4                __floatundisf
+                0x0000000008000ae4                __aeabi_l2f
+                0x0000000008000ae4                __floatdisf
+ .text          0x0000000008000b60      0x2a0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+                0x0000000008000b60                __mulsf3
+                0x0000000008000b60                __aeabi_fmul
+                0x0000000008000cc8                __divsf3
+                0x0000000008000cc8                __aeabi_fdiv
+ .text          0x0000000008000e00       0xec /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+                0x0000000008000e00                __gesf2
+                0x0000000008000e00                __gtsf2
+                0x0000000008000e08                __ltsf2
+                0x0000000008000e08                __lesf2
+                0x0000000008000e10                __nesf2
+                0x0000000008000e10                __eqsf2
+                0x0000000008000e10                __cmpsf2
+                0x0000000008000e70                __aeabi_cfrcmple
+                0x0000000008000e78                __aeabi_cfcmpeq
+                0x0000000008000e78                __aeabi_cfcmple
+                0x0000000008000e88                __aeabi_fcmpeq
+                0x0000000008000e9c                __aeabi_fcmplt
+                0x0000000008000eb0                __aeabi_fcmple
+                0x0000000008000ec4                __aeabi_fcmpge
+                0x0000000008000ed8                __aeabi_fcmpgt
+ .text          0x0000000008000eec       0x4c /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
+                0x0000000008000eec                __fixsfsi
+                0x0000000008000eec                __aeabi_f2iz
+ .text          0x0000000008000f38       0x38 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000008000f38                __aeabi_ldivmod
+ .text          0x0000000008000f70       0x60 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+                0x0000000008000f70                __gnu_ldivmod_helper
+                0x0000000008000fa0                __gnu_uldivmod_helper
+ .text          0x0000000008000fd0        0x4 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+                0x0000000008000fd0                __aeabi_ldiv0
+                0x0000000008000fd0                __aeabi_idiv0
+ .text          0x0000000008000fd4      0x2ac /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+                0x0000000008000fd4                __divdi3
+ .text          0x0000000008001280      0x270 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+                0x0000000008001280                __udivdi3
  *(.text.*)
  .text.NVIC_Init
-                0x0000000008000d58       0x6c bin/misc.o
-                0x0000000008000d58                NVIC_Init
+                0x00000000080014f0       0x6c bin/misc.o
+                0x00000000080014f0                NVIC_Init
+ .text.SysTick_CLKSourceConfig
+                0x000000000800155c       0x18 bin/misc.o
+                0x000000000800155c                SysTick_CLKSourceConfig
  .text.FLASH_SetLatency
-                0x0000000008000dc4       0x14 bin/stm32f10x_flash.o
-                0x0000000008000dc4                FLASH_SetLatency
+                0x0000000008001574       0x14 bin/stm32f10x_flash.o
+                0x0000000008001574                FLASH_SetLatency
  .text.FLASH_PrefetchBufferCmd
-                0x0000000008000dd8       0x18 bin/stm32f10x_flash.o
-                0x0000000008000dd8                FLASH_PrefetchBufferCmd
+                0x0000000008001588       0x18 bin/stm32f10x_flash.o
+                0x0000000008001588                FLASH_PrefetchBufferCmd
  .text.GPIO_Init
-                0x0000000008000df0       0x90 bin/stm32f10x_gpio.o
-                0x0000000008000df0                GPIO_Init
+                0x00000000080015a0       0x90 bin/stm32f10x_gpio.o
+                0x00000000080015a0                GPIO_Init
  .text.GPIO_SetBits
-                0x0000000008000e80        0x4 bin/stm32f10x_gpio.o
-                0x0000000008000e80                GPIO_SetBits
+                0x0000000008001630        0x4 bin/stm32f10x_gpio.o
+                0x0000000008001630                GPIO_SetBits
  .text.GPIO_ResetBits
-                0x0000000008000e84        0x4 bin/stm32f10x_gpio.o
-                0x0000000008000e84                GPIO_ResetBits
+                0x0000000008001634        0x4 bin/stm32f10x_gpio.o
+                0x0000000008001634                GPIO_ResetBits
  .text.RCC_DeInit
-                0x0000000008000e88       0x40 bin/stm32f10x_rcc.o
-                0x0000000008000e88                RCC_DeInit
+                0x0000000008001638       0x40 bin/stm32f10x_rcc.o
+                0x0000000008001638                RCC_DeInit
  .text.RCC_HSEConfig
-                0x0000000008000ec8       0x38 bin/stm32f10x_rcc.o
-                0x0000000008000ec8                RCC_HSEConfig
+                0x0000000008001678       0x38 bin/stm32f10x_rcc.o
+                0x0000000008001678                RCC_HSEConfig
  .text.RCC_PLLConfig
-                0x0000000008000f00       0x14 bin/stm32f10x_rcc.o
-                0x0000000008000f00                RCC_PLLConfig
+                0x00000000080016b0       0x14 bin/stm32f10x_rcc.o
+                0x00000000080016b0                RCC_PLLConfig
  .text.RCC_PLLCmd
-                0x0000000008000f14        0xc bin/stm32f10x_rcc.o
-                0x0000000008000f14                RCC_PLLCmd
+                0x00000000080016c4        0xc bin/stm32f10x_rcc.o
+                0x00000000080016c4                RCC_PLLCmd
  .text.RCC_SYSCLKConfig
-                0x0000000008000f20       0x14 bin/stm32f10x_rcc.o
-                0x0000000008000f20                RCC_SYSCLKConfig
+                0x00000000080016d0       0x14 bin/stm32f10x_rcc.o
+                0x00000000080016d0                RCC_SYSCLKConfig
  .text.RCC_GetSYSCLKSource
-                0x0000000008000f34       0x10 bin/stm32f10x_rcc.o
-                0x0000000008000f34                RCC_GetSYSCLKSource
+                0x00000000080016e4       0x10 bin/stm32f10x_rcc.o
+                0x00000000080016e4                RCC_GetSYSCLKSource
  .text.RCC_HCLKConfig
-                0x0000000008000f44       0x14 bin/stm32f10x_rcc.o
-                0x0000000008000f44                RCC_HCLKConfig
+                0x00000000080016f4       0x14 bin/stm32f10x_rcc.o
+                0x00000000080016f4                RCC_HCLKConfig
  .text.RCC_PCLK1Config
-                0x0000000008000f58       0x14 bin/stm32f10x_rcc.o
-                0x0000000008000f58                RCC_PCLK1Config
+                0x0000000008001708       0x14 bin/stm32f10x_rcc.o
+                0x0000000008001708                RCC_PCLK1Config
  .text.RCC_PCLK2Config
-                0x0000000008000f6c       0x14 bin/stm32f10x_rcc.o
-                0x0000000008000f6c                RCC_PCLK2Config
+                0x000000000800171c       0x14 bin/stm32f10x_rcc.o
+                0x000000000800171c                RCC_PCLK2Config
  .text.RCC_GetClocksFreq
-                0x0000000008000f80       0x90 bin/stm32f10x_rcc.o
-                0x0000000008000f80                RCC_GetClocksFreq
+                0x0000000008001730       0x90 bin/stm32f10x_rcc.o
+                0x0000000008001730                RCC_GetClocksFreq
  .text.RCC_APB2PeriphClockCmd
-                0x0000000008001010       0x18 bin/stm32f10x_rcc.o
-                0x0000000008001010                RCC_APB2PeriphClockCmd
+                0x00000000080017c0       0x18 bin/stm32f10x_rcc.o
+                0x00000000080017c0                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x0000000008001028       0x18 bin/stm32f10x_rcc.o
-                0x0000000008001028                RCC_APB1PeriphClockCmd
+                0x00000000080017d8       0x18 bin/stm32f10x_rcc.o
+                0x00000000080017d8                RCC_APB1PeriphClockCmd
  .text.RCC_GetFlagStatus
-                0x0000000008001040       0x28 bin/stm32f10x_rcc.o
-                0x0000000008001040                RCC_GetFlagStatus
+                0x00000000080017f0       0x28 bin/stm32f10x_rcc.o
+                0x00000000080017f0                RCC_GetFlagStatus
  .text.RCC_WaitForHSEStartUp
-                0x0000000008001068       0x30 bin/stm32f10x_rcc.o
-                0x0000000008001068                RCC_WaitForHSEStartUp
+                0x0000000008001818       0x30 bin/stm32f10x_rcc.o
+                0x0000000008001818                RCC_WaitForHSEStartUp
  .text.SPI_Init
-                0x0000000008001098       0x3e bin/stm32f10x_spi.o
-                0x0000000008001098                SPI_Init
- .text.SPI_Cmd  0x00000000080010d6       0x18 bin/stm32f10x_spi.o
-                0x00000000080010d6                SPI_Cmd
+                0x0000000008001848       0x3e bin/stm32f10x_spi.o
+                0x0000000008001848                SPI_Init
+ .text.SPI_Cmd  0x0000000008001886       0x18 bin/stm32f10x_spi.o
+                0x0000000008001886                SPI_Cmd
  .text.SPI_I2S_SendData
-                0x00000000080010ee        0x4 bin/stm32f10x_spi.o
-                0x00000000080010ee                SPI_I2S_SendData
+                0x000000000800189e        0x4 bin/stm32f10x_spi.o
+                0x000000000800189e                SPI_I2S_SendData
  .text.SPI_I2S_ReceiveData
-                0x00000000080010f2        0x6 bin/stm32f10x_spi.o
-                0x00000000080010f2                SPI_I2S_ReceiveData
+                0x00000000080018a2        0x6 bin/stm32f10x_spi.o
+                0x00000000080018a2                SPI_I2S_ReceiveData
  .text.SPI_I2S_GetFlagStatus
-                0x00000000080010f8        0xc bin/stm32f10x_spi.o
-                0x00000000080010f8                SPI_I2S_GetFlagStatus
+                0x00000000080018a8        0xc bin/stm32f10x_spi.o
+                0x00000000080018a8                SPI_I2S_GetFlagStatus
  .text.USART_Init
-                0x0000000008001104       0x88 bin/stm32f10x_usart.o
-                0x0000000008001104                USART_Init
+                0x00000000080018b4       0x88 bin/stm32f10x_usart.o
+                0x00000000080018b4                USART_Init
  .text.USART_Cmd
-                0x000000000800118c       0x18 bin/stm32f10x_usart.o
-                0x000000000800118c                USART_Cmd
+                0x000000000800193c       0x18 bin/stm32f10x_usart.o
+                0x000000000800193c                USART_Cmd
  .text.USART_ITConfig
-                0x00000000080011a4       0x32 bin/stm32f10x_usart.o
-                0x00000000080011a4                USART_ITConfig
- *fill*         0x00000000080011d6        0x2 
+                0x0000000008001954       0x32 bin/stm32f10x_usart.o
+                0x0000000008001954                USART_ITConfig
+ *fill*         0x0000000008001986        0x2 
  .text.startup.main
-                0x00000000080011d8       0x30 bin/main.o
-                0x00000000080011d8                main
+                0x0000000008001988       0x44 bin/main.o
+                0x0000000008001988                main
  .text.SysTick_Handler
-                0x0000000008001208        0x2 bin/nvic.o
-                0x0000000008001208                SysTick_Handler
- *fill*         0x000000000800120a        0x2 
- .text.spiInit  0x000000000800120c       0xb8 bin/spi.o
-                0x000000000800120c                spiInit
+                0x00000000080019cc        0x2 bin/nvic.o
+                0x00000000080019cc                SysTick_Handler
+ *fill*         0x00000000080019ce        0x2 
+ .text.spiInit  0x00000000080019d0       0xb8 bin/spi.o
+                0x00000000080019d0                spiInit
  .text.spiWriteReadByte
-                0x00000000080012c4       0x34 bin/spi.o
-                0x00000000080012c4                spiWriteReadByte
+                0x0000000008001a88       0x34 bin/spi.o
+                0x0000000008001a88                spiWriteReadByte
  .text.spiReadBuf
-                0x00000000080012f8       0x38 bin/spi.o
-                0x00000000080012f8                spiReadBuf
+                0x0000000008001abc       0x38 bin/spi.o
+                0x0000000008001abc                spiReadBuf
  .text.max6675Init
-                0x0000000008001330        0x4 bin/max6675.o
-                0x0000000008001330                max6675Init
+                0x0000000008001af4        0x4 bin/max6675.o
+                0x0000000008001af4                max6675Init
  .text.max6675ReadReg
-                0x0000000008001334       0x20 bin/max6675.o
-                0x0000000008001334                max6675ReadReg
+                0x0000000008001af8       0x20 bin/max6675.o
+                0x0000000008001af8                max6675ReadReg
+ .text.max6675Refresh
+                0x0000000008001b18       0x1c bin/max6675.o
+                0x0000000008001b18                max6675Refresh
  .text.max6675IsThermocoupleConnected
-                0x0000000008001354       0x28 bin/max6675.o
-                0x0000000008001354                max6675IsThermocoupleConnected
+                0x0000000008001b34       0x10 bin/max6675.o
+                0x0000000008001b34                max6675IsThermocoupleConnected
+ *fill*         0x0000000008001b44        0x4 
  .text.max6675ReadTemperature
-                0x000000000800137c       0x2c bin/max6675.o
-                0x000000000800137c                max6675ReadTemperature
- .text.rccInit  0x00000000080013a8       0x6e bin/rcc.o
-                0x00000000080013a8                rccInit
- *fill*         0x0000000008001416        0x2 
+                0x0000000008001b48       0x44 bin/max6675.o
+                0x0000000008001b48                max6675ReadTemperature
+ .text.rccInit  0x0000000008001b8c       0x6e bin/rcc.o
+                0x0000000008001b8c                rccInit
+ *fill*         0x0000000008001bfa        0x2 
+ .text.delayInit
+                0x0000000008001bfc       0x2c bin/rcc.o
+                0x0000000008001bfc                delayInit
  .text.delay_ms
-                0x0000000008001418       0x38 bin/rcc.o
-                0x0000000008001418                delay_ms
+                0x0000000008001c28       0x38 bin/rcc.o
+                0x0000000008001c28                delay_ms
  .text.uartInit
-                0x0000000008001450       0xac bin/uart.o
-                0x0000000008001450                uartInit
+                0x0000000008001c60       0xac bin/uart.o
+                0x0000000008001c60                uartInit
  .text.uartSendData
-                0x00000000080014fc       0x1c bin/uart.o
-                0x00000000080014fc                uartSendData
+                0x0000000008001d0c       0x1c bin/uart.o
+                0x0000000008001d0c                uartSendData
  .text.uartPutchar
-                0x0000000008001518       0x18 bin/uart.o
-                0x0000000008001518                uartPutchar
+                0x0000000008001d28       0x18 bin/uart.o
+                0x0000000008001d28                uartPutchar
  .text.USART3_IRQHandler
-                0x0000000008001530        0x2 bin/uart.o
-                0x0000000008001530                USART3_IRQHandler
+                0x0000000008001d40        0x2 bin/uart.o
+                0x0000000008001d40                USART3_IRQHandler
  .text.DMA1_Channel2_IRQHandler
-                0x0000000008001532        0x2 bin/uart.o
-                0x0000000008001532                DMA1_Channel2_IRQHandler
+                0x0000000008001d42        0x2 bin/uart.o
+                0x0000000008001d42                DMA1_Channel2_IRQHandler
  .text.systemInit
-                0x0000000008001534       0x2c bin/system.o
-                0x0000000008001534                systemInit
+                0x0000000008001d44       0x2c bin/system.o
+                0x0000000008001d44                systemInit
  .text.get_int_len
-                0x0000000008001560       0x14 bin/eprintf.o
-                0x0000000008001560                get_int_len
- .text.itoa     0x0000000008001574       0xb8 bin/eprintf.o
+                0x0000000008001d70       0x14 bin/eprintf.o
+                0x0000000008001d70                get_int_len
+ .text.itoa     0x0000000008001d84       0xb8 bin/eprintf.o
  .text.evprintf
-                0x000000000800162c      0x13c bin/eprintf.o
-                0x000000000800162c                evprintf
- .text.eprintf  0x0000000008001768       0x1a bin/eprintf.o
-                0x0000000008001768                eprintf
- *fill*         0x0000000008001782        0x2 
+                0x0000000008001e3c      0x13c bin/eprintf.o
+                0x0000000008001e3c                evprintf
+ .text.eprintf  0x0000000008001f78       0x1a bin/eprintf.o
+                0x0000000008001f78                eprintf
+ *fill*         0x0000000008001f92        0x2 
  .text.Reset_Handler
-                0x0000000008001784       0x44 bin/startup_stm32f10x_md.o
-                0x0000000008001784                Reset_Handler
+                0x0000000008001f94       0x44 bin/startup_stm32f10x_md.o
+                0x0000000008001f94                Reset_Handler
  .text.Default_Handler
-                0x00000000080017c8        0x2 bin/startup_stm32f10x_md.o
-                0x00000000080017c8                USBWakeUp_IRQHandler
-                0x00000000080017c8                DebugMon_Handler
-                0x00000000080017c8                TIM1_CC_IRQHandler
-                0x00000000080017c8                HardFault_Handler
-                0x00000000080017c8                PVD_IRQHandler
-                0x00000000080017c8                PendSV_Handler
-                0x00000000080017c8                NMI_Handler
-                0x00000000080017c8                EXTI3_IRQHandler
-                0x00000000080017c8                EXTI0_IRQHandler
-                0x00000000080017c8                I2C2_EV_IRQHandler
-                0x00000000080017c8                UsageFault_Handler
-                0x00000000080017c8                ADC1_2_IRQHandler
-                0x00000000080017c8                SPI1_IRQHandler
-                0x00000000080017c8                TAMPER_IRQHandler
-                0x00000000080017c8                DMA1_Channel4_IRQHandler
-                0x00000000080017c8                RTC_IRQHandler
-                0x00000000080017c8                DMA1_Channel7_IRQHandler
-                0x00000000080017c8                CAN1_RX1_IRQHandler
-                0x00000000080017c8                TIM4_IRQHandler
-                0x00000000080017c8                I2C1_EV_IRQHandler
-                0x00000000080017c8                DMA1_Channel6_IRQHandler
-                0x00000000080017c8                TIM3_IRQHandler
-                0x00000000080017c8                RCC_IRQHandler
-                0x00000000080017c8                TIM1_TRG_COM_IRQHandler
-                0x00000000080017c8                DMA1_Channel1_IRQHandler
-                0x00000000080017c8                Default_Handler
-                0x00000000080017c8                EXTI15_10_IRQHandler
-                0x00000000080017c8                EXTI9_5_IRQHandler
-                0x00000000080017c8                SPI2_IRQHandler
-                0x00000000080017c8                MemManage_Handler
-                0x00000000080017c8                SVC_Handler
-                0x00000000080017c8                DMA1_Channel5_IRQHandler
-                0x00000000080017c8                EXTI4_IRQHandler
-                0x00000000080017c8                USB_LP_CAN1_RX0_IRQHandler
-                0x00000000080017c8                USB_HP_CAN1_TX_IRQHandler
-                0x00000000080017c8                DMA1_Channel3_IRQHandler
-                0x00000000080017c8                TIM1_UP_IRQHandler
-                0x00000000080017c8                WWDG_IRQHandler
-                0x00000000080017c8                TIM2_IRQHandler
-                0x00000000080017c8                TIM1_BRK_IRQHandler
-                0x00000000080017c8                EXTI1_IRQHandler
-                0x00000000080017c8                RTCAlarm_IRQHandler
-                0x00000000080017c8                USART2_IRQHandler
-                0x00000000080017c8                I2C2_ER_IRQHandler
-                0x00000000080017c8                CAN1_SCE_IRQHandler
-                0x00000000080017c8                FLASH_IRQHandler
-                0x00000000080017c8                BusFault_Handler
-                0x00000000080017c8                USART1_IRQHandler
-                0x00000000080017c8                I2C1_ER_IRQHandler
-                0x00000000080017c8                EXTI2_IRQHandler
- *fill*         0x00000000080017ca        0x2 
+                0x0000000008001fd8        0x2 bin/startup_stm32f10x_md.o
+                0x0000000008001fd8                USBWakeUp_IRQHandler
+                0x0000000008001fd8                DebugMon_Handler
+                0x0000000008001fd8                TIM1_CC_IRQHandler
+                0x0000000008001fd8                HardFault_Handler
+                0x0000000008001fd8                PVD_IRQHandler
+                0x0000000008001fd8                PendSV_Handler
+                0x0000000008001fd8                NMI_Handler
+                0x0000000008001fd8                EXTI3_IRQHandler
+                0x0000000008001fd8                EXTI0_IRQHandler
+                0x0000000008001fd8                I2C2_EV_IRQHandler
+                0x0000000008001fd8                UsageFault_Handler
+                0x0000000008001fd8                ADC1_2_IRQHandler
+                0x0000000008001fd8                SPI1_IRQHandler
+                0x0000000008001fd8                TAMPER_IRQHandler
+                0x0000000008001fd8                DMA1_Channel4_IRQHandler
+                0x0000000008001fd8                RTC_IRQHandler
+                0x0000000008001fd8                DMA1_Channel7_IRQHandler
+                0x0000000008001fd8                CAN1_RX1_IRQHandler
+                0x0000000008001fd8                TIM4_IRQHandler
+                0x0000000008001fd8                I2C1_EV_IRQHandler
+                0x0000000008001fd8                DMA1_Channel6_IRQHandler
+                0x0000000008001fd8                TIM3_IRQHandler
+                0x0000000008001fd8                RCC_IRQHandler
+                0x0000000008001fd8                TIM1_TRG_COM_IRQHandler
+                0x0000000008001fd8                DMA1_Channel1_IRQHandler
+                0x0000000008001fd8                Default_Handler
+                0x0000000008001fd8                EXTI15_10_IRQHandler
+                0x0000000008001fd8                EXTI9_5_IRQHandler
+                0x0000000008001fd8                SPI2_IRQHandler
+                0x0000000008001fd8                MemManage_Handler
+                0x0000000008001fd8                SVC_Handler
+                0x0000000008001fd8                DMA1_Channel5_IRQHandler
+                0x0000000008001fd8                EXTI4_IRQHandler
+                0x0000000008001fd8                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008001fd8                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008001fd8                DMA1_Channel3_IRQHandler
+                0x0000000008001fd8                TIM1_UP_IRQHandler
+                0x0000000008001fd8                WWDG_IRQHandler
+                0x0000000008001fd8                TIM2_IRQHandler
+                0x0000000008001fd8                TIM1_BRK_IRQHandler
+                0x0000000008001fd8                EXTI1_IRQHandler
+                0x0000000008001fd8                RTCAlarm_IRQHandler
+                0x0000000008001fd8                USART2_IRQHandler
+                0x0000000008001fd8                I2C2_ER_IRQHandler
+                0x0000000008001fd8                CAN1_SCE_IRQHandler
+                0x0000000008001fd8                FLASH_IRQHandler
+                0x0000000008001fd8                BusFault_Handler
+                0x0000000008001fd8                USART1_IRQHandler
+                0x0000000008001fd8                I2C1_ER_IRQHandler
+                0x0000000008001fd8                EXTI2_IRQHandler
+ *fill*         0x0000000008001fda        0x2 
  .text.SystemInit
-                0x00000000080017cc       0xf4 bin/system_stm32f10x.o
-                0x00000000080017cc                SystemInit
+                0x0000000008001fdc       0xf4 bin/system_stm32f10x.o
+                0x0000000008001fdc                SystemInit
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00000000080018c0       0x27 bin/main.o
+                0x00000000080020d0       0x29 bin/main.o
  .rodata.str1.1
-                0x00000000080018e7        0xd bin/system.o
- .rodata.digit  0x00000000080018f4       0x10 bin/eprintf.o
+                0x00000000080020f9        0xd bin/system.o
+ .rodata.digit  0x0000000008002106       0x10 bin/eprintf.o
  .rodata._ctype_
-                0x0000000008001904      0x101 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-ctype_.o)
-                0x0000000008001904                _ctype_
+                0x0000000008002116      0x101 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-ctype_.o)
+                0x0000000008002116                _ctype_
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.glue_7t)
@@ -2570,40 +2604,40 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  *(.init)
  *(.fini)
  *(.eh_frame)
-                0x0000000008001a08                . = ALIGN (0x4)
- *fill*         0x0000000008001a05        0x3 
-                0x0000000008001a08                _param_start = .
+                0x0000000008002218                . = ALIGN (0x4)
+ *fill*         0x0000000008002217        0x1 
+                0x0000000008002218                _param_start = .
  *(.param)
  *(.param.*)
-                0x0000000008001a08                _param_stop = .
-                0x0000000008001a08                . = ALIGN (0x4)
-                0x0000000008001a08                _log_start = .
+                0x0000000008002218                _param_stop = .
+                0x0000000008002218                . = ALIGN (0x4)
+                0x0000000008002218                _log_start = .
  *(.log)
  *(.log.*)
-                0x0000000008001a08                _log_stop = .
-                0x0000000008001a08                . = ALIGN (0x4)
-                0x0000000008001a08                _etext = .
+                0x0000000008002218                _log_stop = .
+                0x0000000008002218                . = ALIGN (0x4)
+                0x0000000008002218                _etext = .
 
-.vfp11_veneer   0x0000000008001a08        0x0
+.vfp11_veneer   0x0000000008002218        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000008001a08        0x0
+.v4_bx          0x0000000008002218        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000008001a08        0x0
+.iplt           0x0000000008002218        0x0
  .iplt          0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.libc           0x0000000008001a08        0x8
-                0x0000000008001a08                . = ALIGN (0x4)
+.libc           0x0000000008002218        0x8
+                0x0000000008002218                . = ALIGN (0x4)
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008001a08        0x8 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
- .ARM.exidx     0x0000000008001a10        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x0000000008002218        0x8 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x0000000008002220        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
                                           0x8 (size before relaxing)
-                0x0000000008001a10                . = ALIGN (0x4)
-                0x0000000008001a10                _elibc = .
-                0x0000000008001a10                _sidata = _elibc
+                0x0000000008002220                . = ALIGN (0x4)
+                0x0000000008002220                _elibc = .
+                0x0000000008002220                _sidata = _elibc
 
-.rel.dyn        0x0000000008001a10        0x0
+.rel.dyn        0x0000000008002220        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .flashpatch     0x0000000000000000        0x0
@@ -2616,7 +2650,7 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  *(.endflash)
                 0x0000000000000000                . = ALIGN (0x4)
 
-.data           0x0000000020000000       0x18 load address 0x0000000008001a10
+.data           0x0000000020000000       0x18 load address 0x0000000008002220
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -2632,27 +2666,29 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
                 0x0000000020000018                . = ALIGN (0x4)
                 0x0000000020000018                _edata = .
 
-.igot.plt       0x0000000020000018        0x0 load address 0x0000000008001a28
+.igot.plt       0x0000000020000018        0x0 load address 0x0000000008002238
  .igot.plt      0x0000000000000000        0x0 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x0000000020000018        0x8 load address 0x0000000008001a28
+.bss            0x0000000020000018        0x8 load address 0x0000000008002238
                 0x0000000020000018                . = ALIGN (0x4)
                 0x0000000020000018                _sbss = .
  *(.bss)
  *(.bss.*)
- .bss.fac_ms    0x0000000020000018        0x2 bin/rcc.o
- .bss.isInit    0x000000002000001a        0x1 bin/system.o
+ .bss.fac_us    0x0000000020000018        0x1 bin/rcc.o
+ *fill*         0x0000000020000019        0x1 
+ .bss.fac_ms    0x000000002000001a        0x2 bin/rcc.o
+ .bss.isInit    0x000000002000001c        0x1 bin/system.o
  *(COMMON)
- COMMON         0x000000002000001b        0x2 bin/max6675.o
-                0x000000002000001b                max6675_ls
-                0x000000002000001c                max6675_ms
+ COMMON         0x000000002000001d        0x2 bin/max6675.o
+                0x000000002000001d                max6675_ls
+                0x000000002000001e                max6675_ms
                 0x0000000020000020                . = ALIGN (0x4)
- *fill*         0x000000002000001d        0x3 
+ *fill*         0x000000002000001f        0x1 
                 0x0000000020000020                _ebss = .
                 0x0000000020000020                PROVIDE (end, _ebss)
                 0x0000000020000020                PROVIDE (_end, _ebss)
 
-._usrstack      0x0000000020000020      0x100 load address 0x0000000008001a30
+._usrstack      0x0000000020000020      0x100 load address 0x0000000008002240
                 0x0000000020000020                . = ALIGN (0x4)
                 0x0000000020000020                _susrstack = .
                 0x0000000020000120                . = (. + _Minimum_Stack_Size)
@@ -2764,27 +2800,31 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .ARM.attributes
                 0x00000000000002eb       0x33 bin/system_stm32f10x.o
  .ARM.attributes
-                0x000000000000031e       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
+                0x000000000000031e       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x000000000000033b       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                0x000000000000033b       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x0000000000000358       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+                0x0000000000000358       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
  .ARM.attributes
-                0x0000000000000375       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+                0x0000000000000375       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x0000000000000392       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
+                0x0000000000000392       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x00000000000003af       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+                0x00000000000003af       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x00000000000003cc       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+                0x00000000000003cc       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
  .ARM.attributes
-                0x00000000000003f9       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+                0x00000000000003e9       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
  .ARM.attributes
-                0x0000000000000416       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+                0x0000000000000406       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
  .ARM.attributes
-                0x0000000000000443       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+                0x0000000000000433       0x1d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000000000000470       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-ctype_.o)
+                0x0000000000000450       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000000000000047d       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x00000000000004aa       0x2d /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-ctype_.o)
 
 .debug
  *(.debug)
@@ -2798,7 +2838,7 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x670
+.debug_aranges  0x0000000000000000      0x678
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x40 bin/misc.o
@@ -2819,22 +2859,22 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .debug_aranges
                 0x00000000000004d8       0x30 bin/spi.o
  .debug_aranges
-                0x0000000000000508       0x40 bin/max6675.o
+                0x0000000000000508       0x48 bin/max6675.o
  .debug_aranges
-                0x0000000000000548       0x38 bin/rcc.o
+                0x0000000000000550       0x38 bin/rcc.o
  .debug_aranges
-                0x0000000000000580       0x68 bin/uart.o
+                0x0000000000000588       0x68 bin/uart.o
  .debug_aranges
-                0x00000000000005e8       0x20 bin/system.o
+                0x00000000000005f0       0x20 bin/system.o
  .debug_aranges
-                0x0000000000000608       0x40 bin/eprintf.o
+                0x0000000000000610       0x40 bin/eprintf.o
  .debug_aranges
-                0x0000000000000648       0x28 bin/system_stm32f10x.o
+                0x0000000000000650       0x28 bin/system_stm32f10x.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x5572
+.debug_info     0x0000000000000000     0x5581
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4da bin/misc.o
  .debug_info    0x00000000000004da      0x90b bin/stm32f10x_flash.o
@@ -2842,17 +2882,17 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .debug_info    0x00000000000015a8      0x8a2 bin/stm32f10x_rcc.o
  .debug_info    0x0000000000001e4a      0x99d bin/stm32f10x_spi.o
  .debug_info    0x00000000000027e7      0xa54 bin/stm32f10x_usart.o
- .debug_info    0x000000000000323b      0x187 bin/main.o
- .debug_info    0x00000000000033c2       0xd2 bin/nvic.o
- .debug_info    0x0000000000003494      0x6ba bin/spi.o
- .debug_info    0x0000000000003b4e      0x206 bin/max6675.o
- .debug_info    0x0000000000003d54      0x467 bin/rcc.o
- .debug_info    0x00000000000041bb      0x9f5 bin/uart.o
- .debug_info    0x0000000000004bb0      0x12f bin/system.o
- .debug_info    0x0000000000004cdf      0x440 bin/eprintf.o
- .debug_info    0x000000000000511f      0x453 bin/system_stm32f10x.o
+ .debug_info    0x000000000000323b      0x1c8 bin/main.o
+ .debug_info    0x0000000000003403       0xd2 bin/nvic.o
+ .debug_info    0x00000000000034d5      0x6b9 bin/spi.o
+ .debug_info    0x0000000000003b8e      0x1d6 bin/max6675.o
+ .debug_info    0x0000000000003d64      0x466 bin/rcc.o
+ .debug_info    0x00000000000041ca      0x9f5 bin/uart.o
+ .debug_info    0x0000000000004bbf      0x12f bin/system.o
+ .debug_info    0x0000000000004cee      0x440 bin/eprintf.o
+ .debug_info    0x000000000000512e      0x453 bin/system_stm32f10x.o
 
-.debug_abbrev   0x0000000000000000     0x17b0
+.debug_abbrev   0x0000000000000000     0x17f7
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x144 bin/misc.o
  .debug_abbrev  0x0000000000000144      0x26b bin/stm32f10x_flash.o
@@ -2860,17 +2900,17 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .debug_abbrev  0x0000000000000589      0x1d4 bin/stm32f10x_rcc.o
  .debug_abbrev  0x000000000000075d      0x1ee bin/stm32f10x_spi.o
  .debug_abbrev  0x000000000000094b      0x1ee bin/stm32f10x_usart.o
- .debug_abbrev  0x0000000000000b39       0xed bin/main.o
- .debug_abbrev  0x0000000000000c26       0x9e bin/nvic.o
- .debug_abbrev  0x0000000000000cc4      0x1a0 bin/spi.o
- .debug_abbrev  0x0000000000000e64      0x10a bin/max6675.o
- .debug_abbrev  0x0000000000000f6e      0x1a3 bin/rcc.o
- .debug_abbrev  0x0000000000001111      0x22b bin/uart.o
- .debug_abbrev  0x000000000000133c       0xcb bin/system.o
- .debug_abbrev  0x0000000000001407      0x21e bin/eprintf.o
- .debug_abbrev  0x0000000000001625      0x18b bin/system_stm32f10x.o
+ .debug_abbrev  0x0000000000000b39      0x100 bin/main.o
+ .debug_abbrev  0x0000000000000c39       0x9e bin/nvic.o
+ .debug_abbrev  0x0000000000000cd7      0x1a0 bin/spi.o
+ .debug_abbrev  0x0000000000000e77      0x13e bin/max6675.o
+ .debug_abbrev  0x0000000000000fb5      0x1a3 bin/rcc.o
+ .debug_abbrev  0x0000000000001158      0x22b bin/uart.o
+ .debug_abbrev  0x0000000000001383       0xcb bin/system.o
+ .debug_abbrev  0x000000000000144e      0x21e bin/eprintf.o
+ .debug_abbrev  0x000000000000166c      0x18b bin/system_stm32f10x.o
 
-.debug_line     0x0000000000000000     0x3ede
+.debug_line     0x0000000000000000     0x3eef
  *(.debug_line)
  .debug_line    0x0000000000000000      0x366 bin/misc.o
  .debug_line    0x0000000000000366      0x58d bin/stm32f10x_flash.o
@@ -2878,17 +2918,17 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .debug_line    0x0000000000000da4      0x59a bin/stm32f10x_rcc.o
  .debug_line    0x000000000000133e      0x53d bin/stm32f10x_spi.o
  .debug_line    0x000000000000187b      0x57a bin/stm32f10x_usart.o
- .debug_line    0x0000000000001df5      0x393 bin/main.o
- .debug_line    0x0000000000002188      0x361 bin/nvic.o
- .debug_line    0x00000000000024e9      0x373 bin/spi.o
- .debug_line    0x000000000000285c      0x362 bin/max6675.o
- .debug_line    0x0000000000002bbe      0x380 bin/rcc.o
- .debug_line    0x0000000000002f3e      0x4d5 bin/uart.o
- .debug_line    0x0000000000003413      0x383 bin/system.o
- .debug_line    0x0000000000003796      0x40d bin/eprintf.o
- .debug_line    0x0000000000003ba3      0x33b bin/system_stm32f10x.o
+ .debug_line    0x0000000000001df5      0x399 bin/main.o
+ .debug_line    0x000000000000218e      0x361 bin/nvic.o
+ .debug_line    0x00000000000024ef      0x370 bin/spi.o
+ .debug_line    0x000000000000285f      0x370 bin/max6675.o
+ .debug_line    0x0000000000002bcf      0x380 bin/rcc.o
+ .debug_line    0x0000000000002f4f      0x4d5 bin/uart.o
+ .debug_line    0x0000000000003424      0x383 bin/system.o
+ .debug_line    0x00000000000037a7      0x40d bin/eprintf.o
+ .debug_line    0x0000000000003bb4      0x33b bin/system_stm32f10x.o
 
-.debug_frame    0x0000000000000000      0xe20
+.debug_frame    0x0000000000000000      0xe24
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x68 bin/misc.o
  .debug_frame   0x0000000000000068      0x1f4 bin/stm32f10x_flash.o
@@ -2899,18 +2939,18 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  .debug_frame   0x00000000000009a8       0x28 bin/main.o
  .debug_frame   0x00000000000009d0       0x30 bin/nvic.o
  .debug_frame   0x0000000000000a00       0x68 bin/spi.o
- .debug_frame   0x0000000000000a68       0x88 bin/max6675.o
- .debug_frame   0x0000000000000af0       0x64 bin/rcc.o
- .debug_frame   0x0000000000000b54       0xdc bin/uart.o
- .debug_frame   0x0000000000000c30       0x28 bin/system.o
- .debug_frame   0x0000000000000c58       0xa8 bin/eprintf.o
- .debug_frame   0x0000000000000d00       0x3c bin/system_stm32f10x.o
- .debug_frame   0x0000000000000d3c       0x28 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x0000000000000d64       0x54 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
- .debug_frame   0x0000000000000db8       0x34 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
- .debug_frame   0x0000000000000dec       0x34 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000000a68       0x8c bin/max6675.o
+ .debug_frame   0x0000000000000af4       0x64 bin/rcc.o
+ .debug_frame   0x0000000000000b58       0xdc bin/uart.o
+ .debug_frame   0x0000000000000c34       0x28 bin/system.o
+ .debug_frame   0x0000000000000c5c       0xa8 bin/eprintf.o
+ .debug_frame   0x0000000000000d04       0x3c bin/system_stm32f10x.o
+ .debug_frame   0x0000000000000d40       0x28 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000000000000d68       0x54 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+ .debug_frame   0x0000000000000dbc       0x34 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .debug_frame   0x0000000000000df0       0x34 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000    0x44e93
+.debug_str      0x0000000000000000    0x44ea2
  *(.debug_str)
  .debug_str     0x0000000000000000    0x3f39f bin/misc.o
                                       0x3f501 (size before relaxing)
@@ -2924,23 +2964,23 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
                                       0x3f9b9 (size before relaxing)
  .debug_str     0x000000000004120a      0x74f bin/stm32f10x_usart.o
                                       0x3fb24 (size before relaxing)
- .debug_str     0x0000000000041959      0x34d bin/main.o
-                                      0x3f5f3 (size before relaxing)
- .debug_str     0x0000000000041ca6       0x5b bin/nvic.o
+ .debug_str     0x0000000000041959      0x36c bin/main.o
+                                      0x3f612 (size before relaxing)
+ .debug_str     0x0000000000041cc5       0x5b bin/nvic.o
                                       0x3f5ab (size before relaxing)
- .debug_str     0x0000000000041d01      0x1a9 bin/spi.o
+ .debug_str     0x0000000000041d20      0x1a9 bin/spi.o
                                       0x3f728 (size before relaxing)
- .debug_str     0x0000000000041eaa       0x50 bin/max6675.o
-                                      0x3f3f3 (size before relaxing)
- .debug_str     0x0000000000041efa       0xa4 bin/rcc.o
+ .debug_str     0x0000000000041ec9       0x50 bin/max6675.o
+                                      0x3f3f4 (size before relaxing)
+ .debug_str     0x0000000000041f19       0x9a bin/rcc.o
                                       0x3f4bc (size before relaxing)
- .debug_str     0x0000000000041f9e     0x293b bin/uart.o
+ .debug_str     0x0000000000041fb3     0x293b bin/uart.o
                                       0x4222f (size before relaxing)
- .debug_str     0x00000000000448d9       0x2f bin/system.o
+ .debug_str     0x00000000000448ee       0x2f bin/system.o
                                       0x3f5b6 (size before relaxing)
- .debug_str     0x0000000000044908      0x4e9 bin/eprintf.o
+ .debug_str     0x000000000004491d      0x4e3 bin/eprintf.o
                                       0x3fce7 (size before relaxing)
- .debug_str     0x0000000000044df1       0xa2 bin/system_stm32f10x.o
+ .debug_str     0x0000000000044e00       0xa2 bin/system_stm32f10x.o
                                       0x3f41e (size before relaxing)
 
 .debug_loc      0x0000000000000000     0x295e
@@ -2974,7 +3014,7 @@ LOAD /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/cr
  *(.debug_varnames)
 OUTPUT(tf1.elf elf32-littlearm)
 
-.debug_ranges   0x0000000000000000      0x598
+.debug_ranges   0x0000000000000000      0x5a0
  .debug_ranges  0x0000000000000000       0x30 bin/misc.o
  .debug_ranges  0x0000000000000030       0xc0 bin/stm32f10x_flash.o
  .debug_ranges  0x00000000000000f0       0x98 bin/stm32f10x_gpio.o
@@ -2984,12 +3024,12 @@ OUTPUT(tf1.elf elf32-littlearm)
  .debug_ranges  0x0000000000000430       0x10 bin/main.o
  .debug_ranges  0x0000000000000440       0x18 bin/nvic.o
  .debug_ranges  0x0000000000000458       0x20 bin/spi.o
- .debug_ranges  0x0000000000000478       0x30 bin/max6675.o
- .debug_ranges  0x00000000000004a8       0x28 bin/rcc.o
- .debug_ranges  0x00000000000004d0       0x58 bin/uart.o
- .debug_ranges  0x0000000000000528       0x10 bin/system.o
- .debug_ranges  0x0000000000000538       0x30 bin/eprintf.o
- .debug_ranges  0x0000000000000568       0x30 bin/system_stm32f10x.o
+ .debug_ranges  0x0000000000000478       0x38 bin/max6675.o
+ .debug_ranges  0x00000000000004b0       0x28 bin/rcc.o
+ .debug_ranges  0x00000000000004d8       0x58 bin/uart.o
+ .debug_ranges  0x0000000000000530       0x10 bin/system.o
+ .debug_ranges  0x0000000000000540       0x30 bin/eprintf.o
+ .debug_ranges  0x0000000000000570       0x30 bin/system_stm32f10x.o
 
 .debug_macro    0x0000000000000000     0xc440
  .debug_macro   0x0000000000000000      0x104 bin/misc.o
@@ -3468,12 +3508,22 @@ USB_LP_CAN1_RX0_IRQHandler                        bin/startup_stm32f10x_md.o
 UsageFault_Handler                                bin/startup_stm32f10x_md.o
 WWDG_IRQHandler                                   bin/startup_stm32f10x_md.o
 _Jv_RegisterClasses                               /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+__adddf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __addsf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __aeabi_cfcmpeq                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
 __aeabi_cfcmple                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
 __aeabi_cfrcmple                                  /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
 __aeabi_d2f                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
                                                   bin/eprintf.o
+                                                  bin/max6675.o
+__aeabi_dadd                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+__aeabi_ddiv                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+__aeabi_dmul                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+                                                  bin/max6675.o
+__aeabi_drsub                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+__aeabi_dsub                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+__aeabi_f2d                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                                                  bin/main.o
 __aeabi_f2iz                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
                                                   bin/eprintf.o
 __aeabi_fadd                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
@@ -3489,15 +3539,20 @@ __aeabi_fmul                                      /Users/rijn/gcc-arm-none-eabi/
 __aeabi_frsub                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __aeabi_fsub                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
                                                   bin/eprintf.o
+__aeabi_i2d                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                                                  bin/max6675.o
 __aeabi_i2f                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
                                                   bin/eprintf.o
 __aeabi_idiv0                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+__aeabi_l2d                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __aeabi_l2f                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __aeabi_ldiv0                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
                                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
 __aeabi_ldivmod                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
                                                   bin/eprintf.o
+__aeabi_ui2d                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __aeabi_ui2f                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__aeabi_ul2d                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __aeabi_ul2f                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __bss_end__                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 __bss_start__                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
@@ -3506,15 +3561,21 @@ __cmpsf2                                          /Users/rijn/gcc-arm-none-eabi/
 __ctype_ptr__                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-ctype_.o)
                                                   bin/eprintf.o
 __deregister_frame_info                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+__divdf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
 __divdi3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
                                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
 __divsf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
 __dso_handle                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 __eqsf2                                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+__extendsfdf2                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __fixsfsi                                         /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixsfsi.o)
+__floatdidf                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __floatdisf                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatsidf                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __floatsisf                                       /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatundidf                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __floatundisf                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+__floatunsidf                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __floatunsisf                                     /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __gesf2                                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
 __gnu_ldivmod_helper                              /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
@@ -3528,6 +3589,7 @@ __libc_fini_array                                 /Users/rijn/gcc-arm-none-eabi/
 __libc_init_array                                 /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-init.o)
                                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 __ltsf2                                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+__muldf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
 __mulsf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
 __nesf2                                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
 __preinit_array_end                               /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-init.o)
@@ -3537,6 +3599,7 @@ __sf_fake_stderr                                  /Users/rijn/gcc-arm-none-eabi/
 __sf_fake_stdin                                   /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-impure.o)
 __sf_fake_stdout                                  /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc_nano.a(lib_a-impure.o)
 __stack                                           /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__subdf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
 __subsf3                                          /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
 __truncdfsf2                                      /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_truncdfsf2.o)
 __udivdi3                                         /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
@@ -3559,6 +3622,7 @@ _sidata                                           bin/startup_stm32f10x_md.o
 _start                                            /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 atexit                                            /Users/rijn/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 delayInit                                         bin/rcc.o
+                                                  bin/main.o
 delay_ms                                          bin/rcc.o
                                                   bin/main.o
 delay_us                                          bin/rcc.o
@@ -3582,6 +3646,8 @@ max6675IsThermocoupleConnected                    bin/max6675.o
                                                   bin/main.o
 max6675ReadReg                                    bin/max6675.o
 max6675ReadTemperature                            bin/max6675.o
+                                                  bin/main.o
+max6675Refresh                                    bin/max6675.o
                                                   bin/main.o
 max6675_ls                                        bin/max6675.o
 max6675_ms                                        bin/max6675.o
